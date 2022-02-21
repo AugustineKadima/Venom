@@ -10,7 +10,9 @@ class Calculator:
     
     # Create method to add two integers a and b
     def add_numbers(a, b):
-        return a + b
+        if(type(a) == int and type(b)== int):
+            return a + b
+        else: print("Only integers are allowed")
 
     # Create method to find the difference etween two integers a and b
     def subtract_numbers(a, b):
