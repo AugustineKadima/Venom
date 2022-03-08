@@ -1,20 +1,19 @@
 def reverse_words_in_array(array_of_words):
+    wordDict = {}
     for i in range(len(array_of_words)):
-        
-        charArray = list(array_of_words[i])
-        n = len(charArray)
-        print(charArray)
-        temp = charArray[n - 1]
-        for j in range(n):
-            
-            charArray[n - 1] = charArray[j]
-            charArray[j] = temp
-            n -= 1
+        wordDict.update({0,array_of_words[i]})
+  
 
-        print("----",charArray)
+   
+
+    print(wordDict)
+        
+
+      
+
 
 result = reverse_words_in_array(["python","javascript","angular"])
 
-# print result
 print(result)
+
             
