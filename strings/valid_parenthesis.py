@@ -26,27 +26,27 @@ def validparenthesis(s):
 
     bracketStack = []
 
-    for character in s:
-        if character == "(" or character == "{" or character == "[":
-            bracketStack.append(character)
-        elif character == ")" and len(bracketStack) > 0:
+    for i in range(len(s)):
+        if s[i] == "(" or s[i] == "{" or s[i] == "[":
+            bracketStack.append(s[i])
+        elif s[i] == ")" and len(bracketStack) > 0:
             if bracketStack[len(bracketStack) - 1] == "(":
                 bracketStack.pop()
                 return True
             else: return False
-        elif character == "}" and len(bracketStack) > 0:
+        elif s[i] == "}" and len(bracketStack) > 0:
             if bracketStack[len(bracketStack) - 1] == "{":
                 bracketStack.pop()
                 return True
             else: return False
-        elif character == "]" and len(bracketStack) > 0:
+        elif s[i] == "]" and len(bracketStack) > 0:
             if bracketStack[len(bracketStack) - 1] == "[":
                 bracketStack.pop()
                 return True
             else: return False
         else: return False
 
-output = validparenthesis("(]")
+output = validparenthesis("(){}}{")
 print(output)
             
 
